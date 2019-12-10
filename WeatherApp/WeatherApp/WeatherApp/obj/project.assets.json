@@ -531,6 +531,7 @@
         "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
         "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
         "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll.mdb",
         "lib/MonoAndroid10/Plugin.Connectivity.pdb",
         "lib/MonoAndroid10/Plugin.Connectivity.xml",
         "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
@@ -890,6 +891,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microsoft.Bcl >= 1.1.10",
       "Microsoft.Bcl.Build >= 1.0.21",
       "Microsoft.Net.Http >= 2.2.29",
       "NETStandard.Library >= 2.0.3",
@@ -900,23 +902,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amp-laptop\\.nuget\\packages\\": {},
+    "C:\\Users\\Amp-PC\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+      "projectUniqueName": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
       "projectName": "WeatherApp",
-      "projectPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
-      "packagesPath": "C:\\Users\\Amp-laptop\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\obj\\",
+      "projectPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+      "packagesPath": "C:\\Users\\Amp-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Amp-laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Amp-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -941,6 +943,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Microsoft.Bcl": {
+            "target": "Package",
+            "version": "[1.1.10, )"
+          },
           "Microsoft.Bcl.Build": {
             "target": "Package",
             "version": "[1.0.21, )"
