@@ -23,7 +23,7 @@ namespace WeatherApp.Model
         public double temperature { get; set; }
         public int pressure { get; set; }
         public int humidity { get; set; }
-        public int temp_min { get; set; }
+        public double temp_min { get; set; }
         public double temp_max { get; set; }
     }
 

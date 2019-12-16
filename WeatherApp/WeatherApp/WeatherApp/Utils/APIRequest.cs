@@ -1,21 +1,24 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using WeatherApp.Model;
 
 namespace WeatherApp.Utils
 {
-    class APIRequest
+    public partial class APIRequest
     {
-        private readonly String API_KEY = "ce5cae10e6dca0a8a70d4fe71961ed8d";
-        private readonly String COUNTRY_CODE = "PT";
-        private readonly String KEY = "AIzaSyBdjaqoJwM6gsICogyRii43T4YcWrObdYM"; //google
+        private static readonly String API_KEY = "ce5cae10e6dca0a8a70d4fe71961ed8d";
+        private static readonly String COUNTRY_CODE = "PT";
+        private static readonly String KEY = "AIzaSyBdjaqoJwM6gsICogyRii43T4YcWrObdYM"; //google
 
-        public async void GetJSONWeatherRequest(int requestType, string city)
+        //Request https://api.openweathermap.org/data/2.5/weather?q=Porto,PT&units=metric&appid=ce5cae10e6dca0a8a70d4fe71961ed8d
+
+        public static async void GetJSONWeatherRequest(int requestType, string city)
         {
             // Check network status  
-            if (await NetworkCheck.IsInternetAsync())
+            if (NetworkCheck.IsInternetAsync())
             {
 
                 var client = new System.Net.Http.HttpClient();
@@ -32,16 +35,27 @@ namespace WeatherApp.Utils
 
                 URL += city + "," + COUNTRY_CODE + "&units=metric&appid=" + API_KEY;
 
-                var response = await client.GetAsync(URL);
-                string weatherJsonResponse = await response.Content.ReadAsStringAsync();
-
-                WeatherRootObject objWeatherInfo = new WeatherRootObject();
-                if (weatherJsonResponse != "")
+                //var response = await client.GetAsync(URL);
+                try
                 {
-                    objWeatherInfo = JsonConvert.DeserializeObject<WeatherRootObject>(weatherJsonResponse);
-                }
+                    System.Net.Http.HttpResponseMessage response = await client.GetAsync(URL);
+                    string weatherJsonResponse = await response.Content.ReadAsStringAsync();
 
-                Console.WriteLine("City name:" + objWeatherInfo.cityName);
+                    WeatherRootObject objWeatherInfo = new WeatherRootObject();
+                    if (weatherJsonResponse != "")
+                    {
+                        objWeatherInfo = JsonConvert.DeserializeObject<WeatherRootObject>(weatherJsonResponse);
+                    }
+
+                    Debug.WriteLine("City name: " + objWeatherInfo.base_info);
+                    Debug.WriteLine("Coordinates longitude: " + objWeatherInfo.coord.latitude);
+                } catch (ArgumentNullException e)
+                {
+                    Debug.WriteLine("Error Argument Null Exception Weather Request: " + e);
+                } catch (System.Net.Http.HttpRequestException e)
+                {
+                    Debug.WriteLine("Error System.Net.Http.HttpRequestException Weather Request: " + e);
+                }
 
                 //Binding listview with server response    
                 //listviewConacts.ItemsSource = ObjContactList.contacts;

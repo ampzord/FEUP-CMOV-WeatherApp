@@ -6,13 +6,10 @@
              mc:Ignorable="d"
              x:Class="WeatherApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
 
-        <Button Text="Click Me" Clicked="Handle_Clicked" />
+    <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,50">
+        <Label Text="LONDON, GB" FontSize="16" VerticalOptions="Center" TextColor="White"/>
     </StackLayout>
+    <Label Text="This is underlined text." TextDecorations="Underline"  />
 
 </ContentPage>
