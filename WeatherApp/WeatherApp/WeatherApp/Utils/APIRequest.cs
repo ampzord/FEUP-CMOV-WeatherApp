@@ -34,6 +34,7 @@ namespace WeatherApp.Utils
                 }
 
                 URL += city + "," + COUNTRY_CODE + "&units=metric&appid=" + API_KEY;
+                Debug.WriteLine("URL: " + URL);
 
                 //var response = await client.GetAsync(URL);
                 try
@@ -47,8 +48,9 @@ namespace WeatherApp.Utils
                         objWeatherInfo = JsonConvert.DeserializeObject<WeatherRootObject>(weatherJsonResponse);
                     }
 
-                    Debug.WriteLine("City name: " + objWeatherInfo.base_info);
-                    Debug.WriteLine("Coordinates longitude: " + objWeatherInfo.coord.latitude);
+                    Debug.WriteLine("City name: " + objWeatherInfo.name);
+                    Debug.WriteLine("Base: " + objWeatherInfo.Base);
+                    Debug.WriteLine("Lat: " + objWeatherInfo.coord.lat);
                 } catch (ArgumentNullException e)
                 {
                     Debug.WriteLine("Error Argument Null Exception Weather Request: " + e);
