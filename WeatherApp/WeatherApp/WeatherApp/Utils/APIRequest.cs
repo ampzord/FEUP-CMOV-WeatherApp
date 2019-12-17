@@ -29,7 +29,6 @@ namespace WeatherApp.Utils
 
                 //Debug.WriteLine("Weather URL: " + URL);
 
-                //var response = await client.GetAsync(URL);
                 try
                 {
                     System.Net.Http.HttpResponseMessage response = await client.GetAsync(URL);
