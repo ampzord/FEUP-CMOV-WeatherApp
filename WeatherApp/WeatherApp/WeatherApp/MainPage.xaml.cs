@@ -16,7 +16,8 @@ namespace WeatherApp
         public MainPage()
         {
             InitializeComponent();
-            APIRequest.GetJSONWeatherRequest(0, "Porto");
+
+            APIRequest.GetJSONForecastRequest("Porto");
 
 
         }
@@ -27,5 +28,12 @@ namespace WeatherApp
             ((Button)sender).Text = $"You clicked {count} times.";
             DisplayAlert("Title", "Hello World", "Ok");
         }
+
+        List<String> districts_pt = 
+            new List<String>() { 
+                "Viana do Castelo", "Braga", "Vila Real", "Bragança", "Porto", "Aveiro", "Viseu", "Guarda", 
+                "Coimbra", "Castelo Branco", "Leiria", "Santarém", "Castelo Branco", "Lisboa", "Portalegre", 
+                "Évora", "Setúbal", "Beja", "Faro" 
+            };
     }
 }

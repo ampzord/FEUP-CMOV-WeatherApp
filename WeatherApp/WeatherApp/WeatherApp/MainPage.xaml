@@ -6,10 +6,15 @@
              mc:Ignorable="d"
              x:Class="WeatherApp.MainPage">
 
-
-    <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,50">
-        <Label Text="LONDON, GB" FontSize="16" VerticalOptions="Center" TextColor="White"/>
-    </StackLayout>
-    <Label Text="This is underlined text." TextDecorations="Underline"  />
-
+    <!--<MasterDetailPage.Master>
+        <local:MasterPage x:Name="masterPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:ContactsPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+        -->
 </ContentPage>

@@ -24,6 +24,7 @@ D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.AssemblyInfoInputs.cache
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.AssemblyInfo.cs
+D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.dll
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\ref\WeatherApp.dll
 D:\Documents\FEUP\CMOV\_Project2\FEUP-CMOV2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.pdb

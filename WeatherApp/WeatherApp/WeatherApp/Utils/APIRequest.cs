@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using WeatherApp.Model;
+using static WeatherApp.Model.RequestJSONForecast;
 
 namespace WeatherApp.Utils
 {
@@ -11,11 +12,11 @@ namespace WeatherApp.Utils
     {
         private static readonly String API_KEY = "ce5cae10e6dca0a8a70d4fe71961ed8d";
         private static readonly String COUNTRY_CODE = "PT";
-        private static readonly String KEY = "AIzaSyBdjaqoJwM6gsICogyRii43T4YcWrObdYM"; //google
+        //private static readonly String KEY = "AIzaSyBdjaqoJwM6gsICogyRii43T4YcWrObdYM"; //google
 
         //Request https://api.openweathermap.org/data/2.5/weather?q=Porto,PT&units=metric&appid=ce5cae10e6dca0a8a70d4fe71961ed8d
 
-        public static async void GetJSONWeatherRequest(int requestType, string city)
+        public static async void GetJSONWeatherRequest(string city)
         {
             // Check network status  
             if (NetworkCheck.IsInternetAsync())
@@ -81,15 +82,15 @@ namespace WeatherApp.Utils
                     System.Net.Http.HttpResponseMessage response = await client.GetAsync(URL);
                     string weatherJsonResponse = await response.Content.ReadAsStringAsync();
 
-                    WeatherRootObject objWeatherInfo = new WeatherRootObject();
+                    ForecastRootObject objWeatherInfo = new ForecastRootObject();
                     if (weatherJsonResponse != "")
                     {
-                        objWeatherInfo = JsonConvert.DeserializeObject<WeatherRootObject>(weatherJsonResponse);
+                        objWeatherInfo = JsonConvert.DeserializeObject<ForecastRootObject>(weatherJsonResponse);
                     }
 
-                    Debug.WriteLine("City name: " + objWeatherInfo.name);
-                    Debug.WriteLine("Base: " + objWeatherInfo.Base);
-                    Debug.WriteLine("Lat: " + objWeatherInfo.coord.lat);
+                    Debug.WriteLine("City name: " + objWeatherInfo.city.country);
+                    //Debug.WriteLine("Base: " + objWeatherInfo.Base);
+                    //Debug.WriteLine("Lat: " + objWeatherInfo.coord.lat);
                 }
                 catch (ArgumentNullException e)
                 {
