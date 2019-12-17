@@ -25,16 +25,9 @@ namespace WeatherApp.Utils
 
                 string URL = "https://api.openweathermap.org/data/2.5/";
 
-                if (requestType == 0)
-                {
-                    URL += "weather?q=";
-                } else if (requestType == 1)
-                {
-                    URL += "forecast?q=";
-                }
+                URL += "weather?q=" + city + "," + COUNTRY_CODE + "&units=metric&appid=" + API_KEY;
 
-                URL += city + "," + COUNTRY_CODE + "&units=metric&appid=" + API_KEY;
-                Debug.WriteLine("URL: " + URL);
+                //Debug.WriteLine("Weather URL: " + URL);
 
                 //var response = await client.GetAsync(URL);
                 try
@@ -57,6 +50,55 @@ namespace WeatherApp.Utils
                 } catch (System.Net.Http.HttpRequestException e)
                 {
                     Debug.WriteLine("Error System.Net.Http.HttpRequestException Weather Request: " + e);
+                }
+
+                //Binding listview with server response    
+                //listviewConacts.ItemsSource = ObjContactList.contacts;
+            }
+            else
+            {
+                //await DisplayAlert("JSONParsing", "No network is available.", "Ok");
+            }
+
+            //Hide loader after server response    
+            //ProgressLoader.IsVisible = false;
+        }
+
+        public static async void GetJSONForecastRequest(string city)
+        {
+            // Check network status  
+            if (NetworkCheck.IsInternetAsync())
+            {
+
+                var client = new System.Net.Http.HttpClient();
+
+                string URL = "https://api.openweathermap.org/data/2.5/";
+
+                URL += "forecast?q=" + city + "," + COUNTRY_CODE + "&units=metric&appid=" + API_KEY;
+                //Debug.WriteLine("Forecast Request URL: " + URL);
+
+                try
+                {
+                    System.Net.Http.HttpResponseMessage response = await client.GetAsync(URL);
+                    string weatherJsonResponse = await response.Content.ReadAsStringAsync();
+
+                    WeatherRootObject objWeatherInfo = new WeatherRootObject();
+                    if (weatherJsonResponse != "")
+                    {
+                        objWeatherInfo = JsonConvert.DeserializeObject<WeatherRootObject>(weatherJsonResponse);
+                    }
+
+                    Debug.WriteLine("City name: " + objWeatherInfo.name);
+                    Debug.WriteLine("Base: " + objWeatherInfo.Base);
+                    Debug.WriteLine("Lat: " + objWeatherInfo.coord.lat);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Debug.WriteLine("Error Argument Null Exception Forecast Request: " + e);
+                }
+                catch (System.Net.Http.HttpRequestException e)
+                {
+                    Debug.WriteLine("Error System.Net.Http.HttpRequestException Forecast Request: " + e);
                 }
 
                 //Binding listview with server response    

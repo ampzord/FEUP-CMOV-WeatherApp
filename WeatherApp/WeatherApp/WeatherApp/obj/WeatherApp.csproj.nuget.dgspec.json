@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {}
+    "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {}
   },
   "projects": {
-    "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {
+    "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+        "projectUniqueName": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
         "projectName": "WeatherApp",
-        "projectPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
-        "packagesPath": "C:\\Users\\Amp-PC\\.nuget\\packages\\",
-        "outputPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\obj\\",
+        "projectPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+        "packagesPath": "C:\\Users\\Amp-laptop\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Amp-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amp-laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -74,7 +74,11 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.3.0.908675, )"
+              "version": "[4.4.0.991265, )"
+            },
+            "Xamarin.HotReload": {
+              "target": "Package",
+              "version": "[1.5.3, )"
             }
           },
           "imports": [
