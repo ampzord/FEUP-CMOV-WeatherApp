@@ -10,44 +10,15 @@
         <ContentPage Padding="10" BackgroundColor="Gray" Title="Master">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5">
-                    <Label Text="Master Page"></Label>
-                    <!--
-                    <Picker Title="Add city to favorites" 
-                            x:Name="addCityToFav"
-                            TitleColor="Red"
-                            SelectedIndexChanged="AddCityToFavsSelectedIndexChanged"/>
-
-                    <Label Text="{Binding 
-                        Source={x:Reference addCityToFav},
-                        Path=SelectedItem}" x:Name="currentCity" /> -->
-
+                    <Label Text="Select City Page"></Label>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
-
-                    
         <ContentPage>
-            <!--<Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" /> -->
-            
-            <!--
-            <Grid VerticalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="20,50">
-                    
-                </StackLayout>
-            </Grid>
-        -->
         </ContentPage>
-
-
     </MasterDetailPage.Detail>
     
 </MasterDetailPage>
