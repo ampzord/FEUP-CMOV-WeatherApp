@@ -88,7 +88,7 @@ namespace WeatherApp.Utils
                         objWeatherInfo = JsonConvert.DeserializeObject<ForecastRootObject>(weatherJsonResponse);
                     }
 
-                    Debug.WriteLine("City name: " + objWeatherInfo.city.country);
+                    Debug.WriteLine("country name: " + objWeatherInfo.city.country);
                     //Debug.WriteLine("Base: " + objWeatherInfo.Base);
                     //Debug.WriteLine("Lat: " + objWeatherInfo.coord.lat);
                 }

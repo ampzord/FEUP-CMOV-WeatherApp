@@ -11,6 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MainPage - Copy %282%29.xaml.cs" />
+    <Compile Remove="MainPage - Copy.xaml.cs" />
+    <Compile Remove="Page1.cs" />
+    <Compile Remove="View1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainPage - Copy %282%29.xaml" />
+    <EmbeddedResource Remove="MainPage - Copy.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
