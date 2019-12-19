@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using WeatherApp.Utils;
 using Xamarin.Forms;
+using WeatherApp.Model;
 
 
 namespace WeatherApp
@@ -13,98 +15,131 @@ namespace WeatherApp
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
-        private List<String> districts_pt =
-                new List<String>() {
-                "Viana do Castelo", "Braga", "Vila Real", "Bragança", "Porto", "Aveiro", "Viseu", "Guarda",
+        private List<string> city_districts_pt =
+                new List<string>() {
+                "Porto", "Viana do Castelo", "Braga", "Vila Real", "Bragança", "Aveiro", "Viseu", "Guarda",
                 "Coimbra", "Castelo Branco", "Leiria", "Santarém", "Castelo Branco", "Lisboa", "Portalegre",
                 "Évora", "Setúbal", "Beja", "Faro"
         };
 
-        private List<String> favorite_cities;
+        //private List<string> favorite_cities;
 
-        private List<String> districts;
+        private WeatherRootObject weather_object;
+        private ForecastRootObject forecast_object;
 
-        //var cityNameLabel = new Label();
-        //var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
-        //picker.ItemsSource = districts_pt;
         public MainPage()
         {
             InitializeComponent();
-
-            /*var picker = new Picker { Title = "Select a city", TitleColor = Color.Red };
-            picker.SetBinding(Picker.ItemsSourceProperty, "Cities");
-            picker.ItemDisplayBinding = new Binding("Name");*/
-
-            APIRequest.GetJSONForecastRequest("Porto");
-
-
+            InititializeProgram();
         }
 
-
-
-        private void populateCitiesPicker()
+        private async void InititializeProgram()
         {
-            districts.Add("Viana do Castelo");
-            districts.Add("Braga");
-            districts.Add("Vila Real");
-
-            //var picker = new Picker { Title = "Select a cityAAA", TitleColor = Color.Red };
-            //picker.ItemsSource = districts;
-
-            
-            //cityNameLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: picker));
-        }
-
-        /*private void AddCityToFavsSelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }*/
-
-        /*private void populateCities() => Picker.ItemsSource = new List<City>
+            DevicePlatform();
+            addCity.ItemsSource = city_districts_pt;
+            addCity.SelectedItem = city_districts_pt[0];
+            BindingContext = this;
+            if (NetworkCheck.IsInternetAsync())
             {
-                new City { Name = "Viana do Castelo"},
-                new City { Name = "Braga"},
-                new City { Name = "Vila Real"},
-                new City { Name = "Porto"},
-                new City { Name = "Bragança"},
-                new City { Name = "Aveiro"},
-                new City { Name = "Viseu"}
-            };
+                weather_object = await APIRequest.GetJSONWeatherRequest(city_districts_pt[0]);
+                forecast_object = await APIRequest.GetJSONForecastRequest(city_districts_pt[0]);
+                if (weather_object == null || forecast_object == null)
+                {
+                    await DisplayAlert("API Error", "Error doing request.", "Ok");
+                }
 
-        public class City
-        {
-            public string Name { get; set; }
-
-            public City() { }
-        }
-
-        private async void Picker_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            City city = new City();
-            city = (City)Picker.SelectedItem;
-            await DisplayAlert("Attention", $"Selected city was { city.Name}", "Ok");
-        }*/
-
-
-
-        /*int count = 0;
-        void Handle_Clicked(object sender, System.EventArgs e)
-        {
-            count++;
-            ((Button)sender).Text = $"You clicked {count} times.";
-            DisplayAlert("Title", "Hello World", "Ok");
-        }*/
-
-        /*void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
-
-            if (selectedIndex != -1)
-            {
-                monkeyNameLabel.Text = (string)picker.ItemsSource[selectedIndex];
+                BindingWeatherInfo();
+                BindingForecastInfo();
+                IsPresented = false;
             }
-        }*/
+            else
+            {
+                await DisplayAlert("JSONParsing", "No network is available.", "Ok");
+            }
+        }
+
+        private void DevicePlatform()
+        {
+            if (Device.RuntimePlatform == Device.iOS)
+                Padding = new Thickness(0, 20, 0, 0);
+            /*else if (Device.RuntimePlatform == Device.Android)
+                Padding = new Thickness(0, 20, 0, 0);
+            else if (Device.RuntimePlatform == Device.UWP)
+                Padding = new Thickness(0, 20, 0, 0);*/
+        }
+
+        private async void AddCitySelectedIndexChanged(object sender, EventArgs e)
+        {
+            Picker picker = addCity;
+            var selectedItem = (string)picker.SelectedItem;
+
+            if (!selectedItem.Equals(city_districts_pt[0]))
+            {
+                if (NetworkCheck.IsInternetAsync())
+                {
+                    weather_object = await APIRequest.GetJSONWeatherRequest(selectedItem);
+                    forecast_object = await APIRequest.GetJSONForecastRequest(selectedItem);
+                    if (weather_object == null || forecast_object == null) {
+                        await DisplayAlert("API Error", "Error doing request.", "Ok");
+                    }
+
+                    BindingWeatherInfo();
+                    BindingForecastInfo();
+                }
+                else
+                {
+                    await DisplayAlert("JSONParsing", "No network is available.", "Ok");
+                }
+
+
+                //string asd = Utils.Utils.hourIcon("");
+                //Debug.WriteLine("day: " + asd);
+                //Utils.Utils.setFavoriteCities(selectedItem);
+                //string savedCity = Utils.Utils.getFavoriteCities();
+                //Debug.WriteLine("City saved to EditPreferences: " + savedCity);
+
+            }
+            IsPresented = false;
+        }
+
+        private async void Forecast_Clicked(object sender, EventArgs args)
+        {
+            //List info = (List)e.Item;
+            await Navigation.PushAsync(new Forecast());
+        }
+
+        private void BindingWeatherInfo()
+        {
+            CurrentCity.Text = this.weather_object.name + ", Portugal";
+            CurrentTemp.Text = this.weather_object.main.temp.ToString("0");
+            CurrentDescription1.Text = Utils.Utils.FirstLetterToUpper(this.weather_object.weather[0].description);
+            CurrentDescription2.Text = DateTime.Now.ToString("ddd, dd MMM HH:mm");
+            CurrentHumidity.Text = this.weather_object.main.humidity.ToString() + "%";
+            CurrentPressure.Text = this.weather_object.main.pressure.ToString() + " hpa";
+            CurrentWind.Text = this.weather_object.wind.speed.ToString() + " m/s";
+            CurrentCloudiness.Text = this.weather_object.clouds.all.ToString() + "%";
+            CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0");
+            CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0");
+            CurrentTempMin.Text = this.weather_object.main.temp_min.ToString("0");
+        }
+
+        private void BindingForecastInfo()
+        {
+
+        }
+
+        private void OnMenuClicked(object sender, EventArgs args)
+        {
+            try
+            {
+                IsPresented = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
     }
 }
