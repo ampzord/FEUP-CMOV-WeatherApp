@@ -17,8 +17,8 @@ namespace WeatherApp
     {
         private List<string> city_districts_pt =
                 new List<string>() {
-                "Porto", "Viana do Castelo", "Braga", "Vila Real", "Bragança", "Aveiro", "Viseu", "Guarda",
-                "Coimbra", "Castelo Branco", "Leiria", "Santarém", "Castelo Branco", "Lisboa", "Portalegre",
+                "Leiria", "Porto", "Viana do Castelo", "Braga", "Vila Real", "Bragança", "Aveiro", "Viseu", "Guarda",
+                "Coimbra", "Castelo Branco", "Santarém", "Castelo Branco", "Lisboa", "Portalegre",
                 "Évora", "Setúbal", "Beja", "Faro"
         };
 
@@ -124,9 +124,11 @@ namespace WeatherApp
 
             CurrentWind.Text = newSpeed.ToString("0") + " km/h";
             CurrentCloudiness.Text = this.weather_object.clouds.all.ToString() + "%";
-            CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0");
-            CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0");
-            CurrentTempMin.Text = this.weather_object.main.temp_min.ToString("0");
+            CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0") + " ºC";
+            CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0") + " ºC";
+            CurrentTempMin.Text = this.weather_object.main.temp_min.ToString("0") + " ºC";
+
+            //Title = 
 
             if (Utils.Utils.hourIcon().Equals("day"))
             {

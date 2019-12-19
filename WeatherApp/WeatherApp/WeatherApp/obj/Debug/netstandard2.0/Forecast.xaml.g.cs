@@ -29,22 +29,22 @@ namespace WeatherApp {
         private global::Xamarin.Forms.Label ForecastCurrentDescription1;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label CurrentHumidity;
+        private global::Xamarin.Forms.Label ForecastHumidity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label CurrentCloudiness;
+        private global::Xamarin.Forms.Label ForecastCloudiness;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label CurrentPressure;
+        private global::Xamarin.Forms.Label ForecastPressure;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label CurrentWind;
+        private global::Xamarin.Forms.Label ForecastWind;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label ForecastTemp;
+        private global::Xamarin.Forms.Label ForecastFeel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label CurrentTempMax;
+        private global::Xamarin.Forms.Label ForecastTempMax;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label ForecastMinTemp;
@@ -56,12 +56,12 @@ namespace WeatherApp {
             WeatherIcon = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "WeatherIcon");
             ForecastCurrentTemp = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastCurrentTemp");
             ForecastCurrentDescription1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastCurrentDescription1");
-            CurrentHumidity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CurrentHumidity");
-            CurrentCloudiness = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CurrentCloudiness");
-            CurrentPressure = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CurrentPressure");
-            CurrentWind = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CurrentWind");
-            ForecastTemp = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastTemp");
-            CurrentTempMax = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CurrentTempMax");
+            ForecastHumidity = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastHumidity");
+            ForecastCloudiness = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastCloudiness");
+            ForecastPressure = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastPressure");
+            ForecastWind = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastWind");
+            ForecastFeel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastFeel");
+            ForecastTempMax = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastTempMax");
             ForecastMinTemp = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "ForecastMinTemp");
         }
     }
