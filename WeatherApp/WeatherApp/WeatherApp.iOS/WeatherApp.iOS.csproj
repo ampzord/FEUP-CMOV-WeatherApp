@@ -122,6 +122,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microcharts">
+      <Version>0.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.7.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Bcl.Build">
       <Version>1.0.21</Version>
     </PackageReference>
@@ -130,6 +136,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.68.1</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Connectivity">
       <Version>3.2.0</Version>
@@ -305,5 +314,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\thunderstorm_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\max_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\min_icon.png" />
   </ItemGroup>
 </Project>

@@ -19,8 +19,12 @@ namespace WeatherApp
         private List<double> wind_average; 
         //private List<double> precipitation_average;
         private List<int> humidity_average;
+
+        private ForecastRootObject obj;
         public Forecast(ForecastRootObject obj)
         {
+
+            this.obj = obj;
             InitializeComponent();
             temp_average = new List<double>();
             temp_max_average = new List<double>();
@@ -76,9 +80,21 @@ namespace WeatherApp
             double humidity_avg = humidity_average.Average();
 
             ForecastMinTemp.Text = temp_min_avg.ToString("0");
-            ForecastTemp.Text = temp_avg.ToString("0");
-            //ForecastCurrentDescription1.Text = 
+            ForecastCurrentTemp.Text = temp_avg.ToString("0");
+            //ForecastMaxTemp.Text = temp_max_avg.ToString("0");
+            ForecastCurrentDescription1.Text = Utils.Utils.FirstLetterToUpper(obj.list[0].weather[0].description);
             ForecastCurrentDescription2.Text = tomorrow.ToString("ddd, dd MMM HH:mm");
+
+            if (Utils.Utils.hourIcon().Equals("day"))
+            {
+                string url = Utils.Utils.retrieveWeatherBackgroundIconDay(obj.list[0].weather[0].main, obj.list[0].weather[0].description);
+                WeatherIcon.Source = url;
+            }
+            else
+            {
+                string url = Utils.Utils.retrieveWeatherBackgroundIconNight(obj.list[0].weather[0].main, obj.list[0].weather[0].description);
+                WeatherIcon.Source = url;
+            }
         }
     }
 }

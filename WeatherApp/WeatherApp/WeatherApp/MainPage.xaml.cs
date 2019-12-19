@@ -50,7 +50,6 @@ namespace WeatherApp
                 }
 
                 BindingWeatherInfo();
-                BindingForecastInfo();
                 IsPresented = false;
             }
             else
@@ -85,7 +84,7 @@ namespace WeatherApp
                     }
 
                     BindingWeatherInfo();
-                    BindingForecastInfo();
+                    Title = this.weather_object.name + ", Portugal";
                 }
                 else
                 {
@@ -103,15 +102,12 @@ namespace WeatherApp
             IsPresented = false;
         }
 
-        private async void ChartForecast_Clicked(object sender, EventArgs args)
+        protected async void ChartForecast_Clicked(object sender, EventArgs e)
         {
-            //List info = (List)e.Item;
-            /*ForecastRootObject obj = forecast_object;
-            obj.list.RemoveRange(8, obj.list.Count - 8);*/
-            await Navigation.PushAsync(new ForecastChart());
+            await Navigation.PushAsync(new ForecastChart(forecast_object));
         }
 
-        private async void Forecast_Clicked(object sender, EventArgs args)
+        protected async void Forecast_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Forecast(forecast_object));
         }
@@ -126,7 +122,7 @@ namespace WeatherApp
             CurrentPressure.Text = this.weather_object.main.pressure.ToString() + " hPa";
             double newSpeed = this.weather_object.wind.speed * 3.6;
 
-            CurrentWind.Text = newSpeed.ToString() + " km/h";
+            CurrentWind.Text = newSpeed.ToString("0") + " km/h";
             CurrentCloudiness.Text = this.weather_object.clouds.all.ToString() + "%";
             CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0");
             CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0");
@@ -142,11 +138,6 @@ namespace WeatherApp
                 WeatherIcon.Source = url;
             }
                 
-        }
-
-        private void BindingForecastInfo()
-        {
-
         }
 
         private void OnMenuClicked(object sender, EventArgs args)
