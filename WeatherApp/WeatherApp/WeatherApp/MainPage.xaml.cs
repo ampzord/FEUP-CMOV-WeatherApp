@@ -36,6 +36,7 @@ namespace WeatherApp
         private async void InititializeProgram()
         {
             DevicePlatform();
+            Title = city_districts_pt[0];
             addCity.ItemsSource = city_districts_pt;
             addCity.SelectedItem = city_districts_pt[0];
             BindingContext = this;
@@ -115,12 +116,23 @@ namespace WeatherApp
             CurrentDescription1.Text = Utils.Utils.FirstLetterToUpper(this.weather_object.weather[0].description);
             CurrentDescription2.Text = DateTime.Now.ToString("ddd, dd MMM HH:mm");
             CurrentHumidity.Text = this.weather_object.main.humidity.ToString() + "%";
-            CurrentPressure.Text = this.weather_object.main.pressure.ToString() + " hpa";
+            CurrentPressure.Text = this.weather_object.main.pressure.ToString() + " hPa";
             CurrentWind.Text = this.weather_object.wind.speed.ToString() + " m/s";
             CurrentCloudiness.Text = this.weather_object.clouds.all.ToString() + "%";
             CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0");
             CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0");
             CurrentTempMin.Text = this.weather_object.main.temp_min.ToString("0");
+
+            if (Utils.Utils.hourIcon().Equals("day"))
+            {
+                string url = Utils.Utils.retrieveWeatherBackgroundIconDay(this.weather_object.weather[0].main, this.weather_object.weather[0].description);
+                WeatherIcon.Source = url;
+            } else
+            {
+                string url = Utils.Utils.retrieveWeatherBackgroundIconNight(this.weather_object.weather[0].main, this.weather_object.weather[0].description);
+                WeatherIcon.Source = url;
+            }
+                
         }
 
         private void BindingForecastInfo()

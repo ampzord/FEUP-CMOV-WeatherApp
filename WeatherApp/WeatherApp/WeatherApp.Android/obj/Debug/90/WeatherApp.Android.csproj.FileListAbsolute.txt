@@ -1045,3 +1045,4 @@ D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\We
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.Android\obj\Debug\90\res\drawable\rain_n.png

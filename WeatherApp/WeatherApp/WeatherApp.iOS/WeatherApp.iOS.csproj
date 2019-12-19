@@ -252,4 +252,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\red_menu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rain_n.png" />
+  </ItemGroup>
 </Project>

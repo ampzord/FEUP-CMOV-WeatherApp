@@ -28,3 +28,4 @@ D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\We
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.dll
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\ref\WeatherApp.dll
 D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\WeatherApp.pdb
+D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp\obj\Debug\netstandard2.0\ForecastChart.xaml.g.cs

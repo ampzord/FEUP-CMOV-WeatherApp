@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using Xamarin.Essentials;
+using System.Diagnostics;
 
 namespace WeatherApp.Utils
 {
@@ -77,7 +78,7 @@ namespace WeatherApp.Utils
                     }
                     else
                     {
-                        return "broken_clouds_n.jpg";
+                        return "rain_n.png"; // return "broken_clouds_n.jpg";
                     }
                 case "Snow":
                     return "snow_n.jpg";
@@ -130,34 +131,21 @@ namespace WeatherApp.Utils
         //toRemoveAll() - Preferences.Clear();
 
         //working
-        public static string hourIcon(string hour)
+        public static string hourIcon()
         {
-            string[] words = hour.Split(' ');
-            string temp_hour = words[1];
+            DateTime localDate = DateTime.Now;
+            Debug.WriteLine("hora: " + localDate.Hour.ToString());
+                
+            int value = Convert.ToInt32(localDate.Hour.ToString());
 
-            string[] lines = Regex.Split(temp_hour, ":");
-
-            switch (lines[0])
+            if (value >= 0 && value <= 6)
             {
-                case "00":
-                    return "night";
-                case "03":
-                    return "night";
-                case "06":
-                    return "night";
-                case "09":
-                    return "day";
-                case "12":
-                    return "day";
-                case "15":
-                    return "day";
-                case "18":
-                    return "day";
-                case "21":
-                    return "night";
-                default:
-                    return "day";
-            }
+                return "night";
+            } else if (value >= 7 && value <= 18)
+            {
+                return "day";
+            } else
+                return "night";
         }
 
         public static string FirstLetterToUpper(string str)
