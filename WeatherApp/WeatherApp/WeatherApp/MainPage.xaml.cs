@@ -36,7 +36,7 @@ namespace WeatherApp
         private async void InititializeProgram()
         {
             DevicePlatform();
-            Title = city_districts_pt[0];
+            Title = city_districts_pt[0] + ", Portugal";
             addCity.ItemsSource = city_districts_pt;
             addCity.SelectedItem = city_districts_pt[0];
             BindingContext = this;
@@ -103,21 +103,30 @@ namespace WeatherApp
             IsPresented = false;
         }
 
-        private async void Forecast_Clicked(object sender, EventArgs args)
+        private async void ChartForecast_Clicked(object sender, EventArgs args)
         {
             //List info = (List)e.Item;
-            await Navigation.PushAsync(new Forecast());
+            /*ForecastRootObject obj = forecast_object;
+            obj.list.RemoveRange(8, obj.list.Count - 8);*/
+            await Navigation.PushAsync(new ForecastChart());
+        }
+
+        private async void Forecast_Clicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new Forecast(forecast_object));
         }
 
         private void BindingWeatherInfo()
         {
-            CurrentCity.Text = this.weather_object.name + ", Portugal";
+            //CurrentCity.Text = this.weather_object.name + ", Portugal";
             CurrentTemp.Text = this.weather_object.main.temp.ToString("0");
             CurrentDescription1.Text = Utils.Utils.FirstLetterToUpper(this.weather_object.weather[0].description);
             CurrentDescription2.Text = DateTime.Now.ToString("ddd, dd MMM HH:mm");
             CurrentHumidity.Text = this.weather_object.main.humidity.ToString() + "%";
             CurrentPressure.Text = this.weather_object.main.pressure.ToString() + " hPa";
-            CurrentWind.Text = this.weather_object.wind.speed.ToString() + " m/s";
+            double newSpeed = this.weather_object.wind.speed * 3.6;
+
+            CurrentWind.Text = newSpeed.ToString() + " km/h";
             CurrentCloudiness.Text = this.weather_object.clouds.all.ToString() + "%";
             CurrentFeelsLike.Text = this.weather_object.main.feels_like.ToString("0");
             CurrentTempMax.Text = this.weather_object.main.temp_max.ToString("0");

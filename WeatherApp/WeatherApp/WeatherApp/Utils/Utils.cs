@@ -14,45 +14,46 @@ namespace WeatherApp.Utils
             switch(main_description)
             {
                 case "Clear":
-                    return "clear_sky.jpg";
+                    return "clear_sky.png";
                 case "Clouds":
                     if (description.Equals("few clouds"))
                     {
-                        return "few_clouds.jpg";
+                        return "few_clouds.png";
                     } else if (description.Equals("scattered clouds"))
                     {
-                        return "scattered_clouds.jpg";
+                        return "scattered_clouds.png";
                     } else if (description.Equals("broken clouds"))
                     {
-                        return "broken_clouds.jpg";
+                        return "broken_clouds.png";
                     }
                     else
                     {
-                        return "broken_clouds.jpg";
+                        return "broken_clouds.png";
                     }
                 case "Snow":
-                    return "snow.jpg";
+                    return "snow.png";
                 case "Rain":
                     if (description.Equals("light rain") || description.Equals("moderate rain") || description.Equals("heavy intensity rain"))
                     {
-                        return "rain.jpg";
+                        Debug.Write("Ola");
+                        return "rain.png";
                     }
                     else if (description.Equals("freezing rain"))
                     {
-                        return "snow.jpg";
+                        return "snow.png";
                     }
                     else
                     {
-                        return "shower_rain.jpg";
+                        return "shower_rain.png";
                     }
                 case "Drizzle":
-                    return "shower_rain.jpg";
+                    return "shower_rain.png";
                 case "Thunderstorm":
-                    return "thunderstorm.jpg";
+                    return "thunderstorm.png";
                 case "Mist":
-                    return "mist.jpg";
+                    return "mist.png";
                 default:
-                    return "mist.jpg";
+                    return "mist.png";
 
             }
         }
@@ -62,47 +63,48 @@ namespace WeatherApp.Utils
             switch (main_description)
             {
                 case "Clear":
-                    return "clear_sky_n.jpg";
+                    return "clear_sky_n.png";
                 case "Clouds":
                     if (description.Equals("few clouds"))
                     {
-                        return "few_clouds_n.jpg";
+                        return "few_clouds_n.png";
                     }
                     else if (description.Equals("scattered clouds"))
                     {
-                        return "scattered_clouds_n.jpg";
+                        return "scattered_clouds_n.png";
                     }
                     else if (description.Equals("broken clouds"))
                     {
-                        return "broken_clouds_n.jpg";
+                        return "broken_clouds_n.png";
                     }
                     else
                     {
-                        return "rain_n.png"; // return "broken_clouds_n.jpg";
+                        return "rain_n.png"; // return "broken_clouds_n.png";
                     }
                 case "Snow":
-                    return "snow_n.jpg";
+                    return "snow_n.png";
                 case "Rain":
                     if (description.Equals("light rain") || description.Equals("moderate rain") || description.Equals("heavy intensity rain"))
                     {
-                        return "rain_n.jpg";
+                        
+                        return "rain_n.png";
                     }
                     else if (description.Equals("freezing rain"))
                     {
-                        return "snow_n.jpg";
+                        return "snow_n.png";
                     }
                     else
                     {
-                        return "shower_rain_n.jpg";
+                        return "shower_rain_n.png";
                     }
                 case "Drizzle":
-                    return "shower_rain_n.jpg";
+                    return "shower_rain_n.png";
                 case "Thunderstorm":
-                    return "thunderstorm_n.jpg";
+                    return "thunderstorm_n.png";
                 case "Mist":
-                    return "mist_n.jpg";
+                    return "mist_n.png";
                 default:
-                    return "mist_n.jpg";
+                    return "mist_n.png";
 
             }
         }

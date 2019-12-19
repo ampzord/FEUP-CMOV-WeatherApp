@@ -36,8 +36,8 @@
                 <Image Source="background.jpg" Aspect="Fill" HeightRequest="250" VerticalOptions="StartAndExpand"/>
                 <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="End" VerticalOptions="Start" Margin="15">
                     <ImageButton Source="red_menu.png" Clicked="OnMenuClicked" WidthRequest="23" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="End" />
-                    <Label Text="Porto, Portugal" 
-                       x:Name ="CurrentCity" FontSize="16" VerticalOptions="End" TextColor="Red"/>
+                    <Label Text="19/12" 
+                       x:Name ="CurrentDescription2" FontSize="16" VerticalOptions="End" TextColor="Red"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" Margin="0,20" HorizontalOptions="Center" VerticalOptions="Center">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -49,8 +49,7 @@
                     </StackLayout>
                     <Label Text="raining" 
                        x:Name ="CurrentDescription1" TextColor="Red" FontSize="16" HorizontalOptions="Center"/>
-                    <Label Text="19/12" 
-                       x:Name ="CurrentDescription2" TextColor="Red" FontSize="12" HorizontalOptions="Center"/>
+                    
                 </StackLayout>
                 <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,0,20,0" Padding="0" HeightRequest="120" VerticalOptions="Start">
                     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
@@ -110,6 +109,11 @@
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 Clicked="Forecast_Clicked" />
+
+                    <Button Text="Chart Forecast"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Clicked="ChartForecast_Clicked" />
                 </StackLayout>
             </Grid>
         </ContentPage>

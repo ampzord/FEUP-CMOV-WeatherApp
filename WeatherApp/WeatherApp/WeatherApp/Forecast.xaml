@@ -21,13 +21,13 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Image Source="weather.png" WidthRequest="50" HeightRequest="50" VerticalOptions="Center"/>
                 <Label Text="25" 
-                           x:Name ="CurrentTemp" TextColor="Red" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
+                           x:Name ="ForecastTemp" TextColor="Red" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
                 <Label Text="°C" TextColor="Red" FontSize="34" VerticalOptions="Center"/>
             </StackLayout>
             <Label Text="raining" 
-                       x:Name ="CurrentDescription1" TextColor="Red" FontSize="16" HorizontalOptions="Center"/>
+                       x:Name ="ForecastCurrentDescription1" TextColor="Red" FontSize="16" HorizontalOptions="Center"/>
             <Label Text="19/12" 
-                       x:Name ="CurrentDescription2" TextColor="Red" FontSize="12" HorizontalOptions="Center"/>
+                       x:Name ="ForecastCurrentDescription2" TextColor="Red" FontSize="12" HorizontalOptions="Center"/>
         </StackLayout>
         <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,0,20,0" Padding="0" HeightRequest="120" VerticalOptions="Start">
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
@@ -41,23 +41,23 @@
                     <Image Source="humidity.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
                         <Label Text="100%" 
-                                   x:Name ="CurrentHumidity" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                   x:Name ="ForecastHumidity" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Humidity" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="cloudiness.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label Text="99%" 
-                                   x:Name ="CurrentCloudiness" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="nao_interessa_cloudiness" 
+                                   x:Name ="ForecastMinTemp" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Cloudiness" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="pressure.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label Text="500 hpa" 
-                                   x:Name ="CurrentPressure" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="500 hPa" 
+                                   x:Name ="ForecastPressure" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Pressure" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
@@ -65,7 +65,7 @@
                     <Image Source="wind.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
                         <Label Text="50 k/h" 
-                                   x:Name ="CurrentWind" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                   x:Name ="ForecastWind" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Wind" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
 
@@ -75,11 +75,11 @@
 
         <StackLayout Grid.Row="2" BackgroundColor="Transparent" Orientation="Vertical" Margin="20" HorizontalOptions="Start">
             <Label Text="12" 
-                               x:Name ="CurrentFeelsLike" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
+                               x:Name ="ForecastFeelsLike" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
             <Label Text="14" 
-                               x:Name ="CurrentTempMax" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
+                               x:Name ="ForecastTempMax" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
             <Label Text="10" 
-                           x:Name ="CurrentTempMin" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
+                           x:Name ="ForecastTempMin" TextColor="#757575" FontSize="12" VerticalOptions="Center" Margin="20,0"/>
         </StackLayout>
     </Grid>
 </ContentPage>

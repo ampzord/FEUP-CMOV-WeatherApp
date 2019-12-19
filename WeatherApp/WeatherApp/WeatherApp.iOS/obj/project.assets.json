@@ -2626,24 +2626,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amp-PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Amp-laptop\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\WeatherApp.iOS.csproj",
+      "projectUniqueName": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\WeatherApp.iOS.csproj",
       "projectName": "WeatherApp.iOS",
-      "projectPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\WeatherApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\Amp-PC\\.nuget\\packages\\",
-      "outputPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\obj\\",
+      "projectPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\WeatherApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\Amp-laptop\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Amp-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Amp-laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2657,8 +2657,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {
-              "projectPath": "D:\\HARD DRIVE\\Documents\\FEUP\\CMOV\\_Trabalho2\\feup-cmov2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj"
+            "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj": {
+              "projectPath": "D:\\Documents\\FEUP\\CMOV\\_Project2\\FEUP-CMOV2\\WeatherApp\\WeatherApp\\WeatherApp\\WeatherApp.csproj"
             }
           }
         }

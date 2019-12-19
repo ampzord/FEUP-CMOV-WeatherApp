@@ -255,4 +255,55 @@
   <ItemGroup>
     <BundleResource Include="Resources\rain_n.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\broken_clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\broken_clouds_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clear_sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clear_sky_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\few_clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\few_clouds_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mist_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scattered_clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scattered_clouds_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shower_rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shower_rain_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\snow_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thunderstorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\thunderstorm_n.png" />
+  </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ namespace WeatherApp.Model
         public double lat { get; set; }
     }
 
-    public class Weather
+    public class Weather2
     {
         public int id { get; set; }
         public string main { get; set; }
@@ -29,13 +29,13 @@ namespace WeatherApp.Model
 
     }
 
-    public class Wind
+    public class Wind2
     {
         public double speed { get; set; }
         public int deg { get; set; } //direction of the wind in degrees
     }
 
-    public class Clouds
+    public class Clouds2
     {
         public int all { get; set; }
     }
@@ -52,12 +52,12 @@ namespace WeatherApp.Model
     public class WeatherRootObject
     {
         public Coordinates coord { get; set; }
-        public List<Weather> weather { get; set; }
+        public List<Weather2> weather { get; set; }
         public string Base { get; set; } //"stations"
         public MainInformation main { get; set; }
         public int visibility { get; set; }
-        public Wind wind { get; set; }
-        public Clouds clouds { get; set; }
+        public Wind2 wind { get; set; }
+        public Clouds2 clouds { get; set; }
         public int dt { get; set; }
         public System sys { get; set; }
         public int timezone { get; set; }
