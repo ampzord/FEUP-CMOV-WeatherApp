@@ -1,8 +1,0 @@
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\optimized\
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.csprojAssemblyReference.cache
-D:\HARD DRIVE\Documents\FEUP\CMOV\_Trabalho2\feup-cmov2\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhoneSimulator\Debug\WeatherApp.iOS.exe.config
